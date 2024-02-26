@@ -43,9 +43,9 @@ resource "kubernetes_manifest" "guestbook" {
           "selfHeal"  = "true"
         }
         "syncOptions" = [
-            "createNamespace=true",
-            "replace=false",
-            "prune=false"
+            "CreateNamespace=true",
+            "Replace=false",
+            "Prune=false"
         ]
       }
     }
