@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chaos-mesh
+  namespace: argocd
+spec:
+  destination:
+    namespace: chaos-mesh
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: chaos-mesh
+    helm:
+      # Specify the values file or parameters for the helm chart
+      values: |
+        dashboard:
+          create: true
+        controllerManager:
+          serviceAccount: argocd-application-controller
+    repoURL: https://charts.chaos-mesh.org
+    targetRevision: 2.6.3
+    type: Helm
+  syncPolicy:
+    automated: {}
