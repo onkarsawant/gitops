@@ -42,9 +42,9 @@ resource "kubernetes_manifest" "pylogger" {
           "selfHeal"  = "true"
         }
         "syncOptions" = [
-            "createNamespace=true",
-            "replace=false",
-            "prune=false"
+            "CreateNamespace=true",
+            "Replace=false",
+            "Prune=false"
         ]
       }
     }

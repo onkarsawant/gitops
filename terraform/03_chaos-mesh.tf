@@ -10,7 +10,7 @@ resource "kubernetes_manifest" "chaos-mesh" {
     }
     "spec" = {
       "destination" = {
-        "namespace" = "chaos-mesh"
+        "namespace" = "chaoseng"
         "server"    = "https://kubernetes.default.svc"
       }
       "project" = "default"
@@ -29,9 +29,9 @@ resource "kubernetes_manifest" "chaos-mesh" {
           "selfHeal" = "true"
         }
         "syncOptions" = [
-          "createNamespace=true",
-          "replace=false",
-          "prune=false"
+          "CreateNamespace=true",
+          "Replace=false",
+          "Prune=false"
         ]
       }
     }
