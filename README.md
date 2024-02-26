@@ -10,7 +10,7 @@ To apply these application configurations using `kubectl`, navigate to the `app`
 
 ```bash
 kubectl apply -f .
-
+```
 
 ## Deploying using Terraform
 
@@ -27,4 +27,4 @@ To deploy ArgoCD and manage applications using Terraform, navigate to the terraf
 ```bash
 terraform init
 terraform apply
-
+```
